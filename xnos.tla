@@ -30,23 +30,23 @@ Next == \E row \in  1..3 : \E col \in 1..3:
    
 \* P1 or P2 victory invariants 
 P1NotWinning == 
-/\ \neg (\E i \in 1..3 : 
-    /\ (board[1][i] = 1 /\ board[2][i] = 1 /\ board[3][i] = 1)
-    /\ (board[i][1] = 1 /\ board[i][2] = 1 /\ board[i][3] = 1)
+\/ \neg (\E i \in 1..3 : 
+    \/ (board[1][i] = 1 /\ board[2][i] = 1 /\ board[3][i] = 1)
+    \/ (board[i][1] = 1 /\ board[i][2] = 1 /\ board[i][3] = 1)
     )
-/\ \neg (board[1][1] = 1 /\ board[2][2] = 1 /\ board[3][3] = 1) 
-/\ \neg (board[1][3] = 1 /\ board[2][2] = 1 /\ board[3][3] = 1)
+\/ \neg (board[1][1] = 1 /\ board[2][2] = 1 /\ board[3][3] = 1) 
+\/ \neg (board[1][3] = 1 /\ board[2][2] = 1 /\ board[3][3] = 1)
     
 P2NotWinning ==
-/\ \neg (\E i \in 1..3 : 
-    /\ (board[1][i] = 2 /\ board[2][i] = 2 /\ board[3][i] = 2)
-    /\ (board[i][1] = 2 /\ board[i][2] = 2 /\ board[i][3] = 2)
+\/ \neg (\E i \in 1..3 : 
+    \/ (board[1][i] = 2 /\ board[2][i] = 2 /\ board[3][i] = 2)
+    \/ (board[i][1] = 2 /\ board[i][2] = 2 /\ board[i][3] = 2)
     )
-/\ \neg (board[1][1] = 2 /\ board[2][2] = 2 /\ board[3][3] = 2) 
-/\ \neg (board[1][3] = 2 /\ board[2][2] = 2 /\ board[3][3] = 2)
+\/ \neg (board[1][1] = 2 /\ board[2][2] = 2 /\ board[3][3] = 2) 
+\/ \neg (board[1][3] = 2 /\ board[2][2] = 2 /\ board[3][3] = 2)
  
 
 =============================================================================
 \* Modification History
-\* Last modified Fri Dec 08 18:53:10 EST 2017 by aditya
+\* Last modified Fri Dec 08 19:10:45 EST 2017 by aditya
 \* Created Thu Dec 07 21:45:57 EST 2017 by aditya
